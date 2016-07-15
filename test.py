@@ -1,4 +1,5 @@
-line = 'asdf fjdk; afed, fjedk, asdef , foo'
-import re
-line_new = re.split(r'[;,\s]\s*', line)
-''.join(v + d for v, d in zip(values, delimiters))
+import pip
+from subprocess import call
+
+for  dist in pip.get_installed_distributions():
+	call('pip install --upgrade ' + dist.project_name,shell=True)
